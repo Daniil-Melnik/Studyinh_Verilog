@@ -16,7 +16,7 @@ module test_top (
              );
 
   not_module logic_not2(
-               .a(a),
+               .a(b),
                .out(out[1])
              );
 
