@@ -3,7 +3,9 @@
 module test_top (
     input logic a,
     input logic b,
-    output logic [5:0] out
+    output logic [5:0] out,
+    output logic [5:0] rshifted_out,
+    output logic [5:0] lshifted_out
   );
 
   logic [5:0] bus;
@@ -43,5 +45,15 @@ module test_top (
                .b(b),
                .out (out[5])
              );
+  
+  shift_right_module shift_right1(
+    .a(out),
+    .out(rshifted_out)
+  );
+
+  shift_left_module shift_left1(
+    .a(rshifted_out),
+    .out(lshifted_out)
+  );
 
 endmodule
