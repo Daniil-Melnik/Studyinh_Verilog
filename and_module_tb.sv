@@ -3,7 +3,7 @@
 module and_module_tb
   ();
 
-  logic a_s;
+  logic a_s; 
   logic b_s;
   logic out_s;
 
