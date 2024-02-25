@@ -10,12 +10,8 @@ module trigger_t_module (
 // initial q = 0;
 
 always @(posedge clk) begin
-    //if (t == 1'b1) q <= ~qin;
 
-    if (rst)
-    begin 
-        q <= 0;
-    end
+    if (rst) q <= 0;
     else if (t)
         q <= ~q;
     else 

@@ -10,9 +10,9 @@ always @(posedge clk) begin
 
     if (rst) q = 0;
 
-    if (r == 1'b0 & s == 1'b1) q <= 1'b1;
-    else if (r == 1'b1 & s == 1'b0) q <= 1'b0;
-    else if (r == 1'b1 & s == 1'b1) q <= 1'bz;
+    if (r & ~s) q <= 0; //Modified combinations
+    else if (~r & s) q <= 1;
+    else if (r & s) q <= 1'bz;
     else q <= q; 
 
 end
