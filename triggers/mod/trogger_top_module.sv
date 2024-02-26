@@ -4,7 +4,7 @@ module trigger_top_module (
     output logic [9:0] outBus
   );
 
-  trigger_d_module  trigger_d_0 (
+  /*trigger_d_module  trigger_d_0 (
                       .d(inBus[0]),
                       .clk(clk),
                       .q(outBus[0]),
@@ -64,6 +64,20 @@ module trigger_top_module (
                       .clk(clk),
                       .q(outBus[9]),
                       .rst(rst)
-                    );
+                    );*/
+
+  genvar i;
+  generate 
+    for (i = 0; i < 10; i++)
+    begin
+      trigger_d_module  trigger_d (
+        .d(inBus[i]),
+        .clk(clk),
+        .q(outBus[i]),
+        .rst(rst)
+      );
+    end 
+  endgenerate 
+
 
 endmodule
