@@ -3,8 +3,8 @@ module and_arr_param_module_tb ();
 
   localparam WIDTH = 2;
 
-  logic [WIDTH - 1 : 0] in;
-  logic [WIDTH - 1 : 0] x;
+  logic [1 : 0] in;
+  logic [1 : 0] x;
   logic [1 : 0] out;
 
   and_arr_param_module # (
