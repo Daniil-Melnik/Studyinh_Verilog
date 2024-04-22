@@ -11,7 +11,7 @@ module counter_mux_module(
     (
      .out(out),
      .clk_in1_p(clk_in1_p),
-     .clk_in1_n(clk_in1_n));  
+     .clk_in1_n(clk_in1_n)); 
 
     logic [3:0][7:0] results;
     
